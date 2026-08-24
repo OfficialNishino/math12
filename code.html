@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 12</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background-color: #8E44AD;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #732D91;
+        }
+
+        #result {
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #eeeeee;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Question 12</h1>
+
+    <p>Which statement about the diagonals of a parallelogram is true?</p>
+
+    <button onclick="answer('A')">A. They always have equal lengths</button>
+    <button onclick="answer('B')">B. They always meet at a right angle</button>
+    <button onclick="answer('C')">C. They bisect each other</button>
+    <button onclick="answer('D')">D. They never intersect</button>
+
+    <p id="result"></p>
+
+</div>
+
+<script>
+function answer(choice) {
+
+    let result = document.getElementById("result");
+
+    if (choice === "A") {
+        result.innerHTML = "Not necessarily! Equal diagonals occur in special parallelograms such as rectangles.";
+    }
+    else if (choice === "B") {
+        result.innerHTML = "Not necessarily! Perpendicular diagonals occur in special parallelograms such as rhombi.";
+    }
+    else if (choice === "C") {
+        result.innerHTML = "Correct! The diagonals of a parallelogram bisect each other. Here's your clue, 12A";
+    }
+    else {
+        result.innerHTML = "Nope! The diagonals of a parallelogram intersect each other.";
+    }
+}
+</script>
+
+</body>
+</html>
